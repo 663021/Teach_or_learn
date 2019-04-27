@@ -13,7 +13,7 @@ namespace TEACH_OR_LEARN
 
         OleDbConnection SqlConnection;
 
-        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=tol_db.mdb";
+        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\1All\Work\Дипломы\TEACH_OR_LEARN\tol_db.mdb";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,12 +56,11 @@ namespace TEACH_OR_LEARN
                 await SqlConnection.OpenAsync();
                 OleDbDataReader sqlReader = null;
 
-                OleDbCommand command = new OleDbCommand("INSERT INTO [Пользователи] ([ФИО],[Адрес электронной почты],[Пароль],Логин,Статус)VALUES(@1,@2,@3,@4,@5)", SqlConnection);
+                OleDbCommand command = new OleDbCommand("INSERT INTO [Ученики] ([ФИО],[Адрес электронной почты],[Пароль],Логин)VALUES(@1,@2,@3,@4)", SqlConnection);
                 command.Parameters.AddWithValue("@1", Names.Text);
                 command.Parameters.AddWithValue("@2", Email.Text);
                 command.Parameters.AddWithValue("@3", Password.Text);
                 command.Parameters.AddWithValue("@4", Login.Text);
-                command.Parameters.AddWithValue("@5", "Ученик");
                 await command.ExecuteNonQueryAsync();
 
                 Response.Redirect("~/Default_page_past.aspx?userID=" + Login.Text, false);

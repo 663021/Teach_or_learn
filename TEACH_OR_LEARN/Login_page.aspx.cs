@@ -12,7 +12,7 @@ namespace TEACH_OR_LEARN
     {
         OleDbConnection SqlConnection;
 
-        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=tol_db.mdb";
+        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\1All\Work\Дипломы\TEACH_OR_LEARN\tol_db.mdb";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace TEACH_OR_LEARN
             await SqlConnection.OpenAsync();
             OleDbDataReader sqlReader = null;
 
-            OleDbCommand command = new OleDbCommand("SELECT * FROM [Пользователи]", SqlConnection);
+            OleDbCommand command = new OleDbCommand("SELECT * FROM [Ученики]", SqlConnection);
 
             sqlReader = command.ExecuteReader();
 
@@ -35,16 +35,8 @@ namespace TEACH_OR_LEARN
                 {
                     if (Password.Text == Convert.ToString(sqlReader["Пароль"]))
                     {
-                        if(Convert.ToString(sqlReader["Статус"]) == "Ученик")
-                        {
-                            Response.Redirect("~/Default_page_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
-                            return;
-                        }
-                        else if (Convert.ToString(sqlReader["Статус"]) == "Учитель")
-                        {
-                            Response.Redirect("~/Default_page_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
-                            return;
-                        }
+                        Response.Redirect("~/Default_page_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
+                        return;
                     }
                 }
             }

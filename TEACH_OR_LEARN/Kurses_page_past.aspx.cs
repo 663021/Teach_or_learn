@@ -13,7 +13,7 @@ namespace TEACH_OR_LEARN
     {
         OleDbConnection SqlConnection;
 
-        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=tol_db.mdb";
+        public string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\1All\Work\Дипломы\TEACH_OR_LEARN\tol_db.mdb";
 
         public void about_click(object sender, EventArgs e)
         {

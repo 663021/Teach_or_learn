@@ -23,6 +23,8 @@ namespace TEACH_OR_LEARN
 
         protected async void Page_Load(object sender, EventArgs e)
         {
+            connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
+
             SqlConnection = new OleDbConnection(connectString);
             await SqlConnection.OpenAsync();
             OleDbDataReader sqlReader = null;
@@ -77,6 +79,12 @@ namespace TEACH_OR_LEARN
         protected void Unnamed4_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/User_kurse_past.aspx?userID=" + Request.QueryString["userID"] + "&kurseID=" + Request.QueryString["kurseID"], false);
+            return;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Remove_user_kurse_page.aspx?userID=" + Request.QueryString["userID"] + "&kurseID=" + Request.QueryString["kurseID"] + "&pageID=2", false);
             return;
         }
     }

@@ -13,13 +13,13 @@
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="Login" CssClass="col-md-2 control-label">Логин</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Login" CssClass="form-control"  OnTextChanged="Login_TextChanged" AutoPostBack="true"/>
+                            <asp:TextBox runat="server" ID="Login" CssClass="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
                         <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Пароль</asp:Label>
                         <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Password" CssClass="form-control" OnTextChanged="Password_TextChanged" AutoPostBack="true"/>
+                            <asp:TextBox runat="server" ID="Password" CssClass="form-control" />
                             <div class="lines">
                                 <asp:Label runat="server" ID="for_pass" AssociatedControlID="for_pass" Style="padding-left:10px;" CssClass="text-danger" Visible="False" AutoPostBack="true">Логин или пароль введены не верно</asp:Label>
                             </div>

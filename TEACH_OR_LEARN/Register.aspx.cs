@@ -17,7 +17,7 @@ namespace TEACH_OR_LEARN
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
         }
 
         protected async void Unnamed6_Click(object sender, EventArgs e)
@@ -26,28 +26,28 @@ namespace TEACH_OR_LEARN
 
             if (Names.Text == "")
             {
-                for_name.Visible = true;
-                for_danger++;
+                Response.Write("<script>alert('Все поля должны быть заполнены!');</script>");
+                return;
             }
             if (Email.Text == "")
             {
-                for_email.Visible = true;
-                for_danger++;
+                Response.Write("<script>alert('Все поля должны быть заполнены!');</script>");
+                return;
             }
             if (Login.Text == "")
             {
-                for_login.Visible = true;
-                for_danger++;
+                Response.Write("<script>alert('Все поля должны быть заполнены!');</script>");
+                return;
             }
             if (Password.Text == "")
             {
-                for_pass.Visible = true;
-                for_danger++;
+                Response.Write("<script>alert('Все поля должны быть заполнены!');</script>");
+                return;
             }
             if (ConfirmPassword.Text == "")
             {
-                for_confirm_pass.Visible = true;
-                for_danger++;
+                Response.Write("<script>alert('Все поля должны быть заполнены!');</script>");
+                return;
             }
 
             if (for_danger == 0)
@@ -61,37 +61,41 @@ namespace TEACH_OR_LEARN
                 command.Parameters.AddWithValue("@2", Email.Text);
                 command.Parameters.AddWithValue("@3", Password.Text);
                 command.Parameters.AddWithValue("@4", Login.Text);
-                command.Parameters.AddWithValue("@5", Login.Text);
+                command.Parameters.AddWithValue("@5", "Ученик");
+
+                OleDbCommand command1 = new OleDbCommand("SELECT * FROM [Пользователи]", SqlConnection);
+
+                sqlReader = command1.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    if (Login.Text == Convert.ToString(sqlReader["Логин"]))
+                    {
+                        Response.Write("<script>alert('Пользователь с таким логином заргестрирован');</script>");
+                        return;
+                    }
+                }
+
+                sqlReader.Close();
                 await command.ExecuteNonQueryAsync();
 
-                Response.Redirect("~/Default_page_past.aspx?userID=" + Login.Text, false);
+                string for_id = "1";
+
+                command = new OleDbCommand("SELECT * FROM [Пользователи]", SqlConnection);
+
+                sqlReader = command.ExecuteReader();
+
+                while (sqlReader.Read())
+                {
+                    if (Login.Text == Convert.ToString(sqlReader["Логин"]))
+                    {
+                        for_id = Convert.ToString(sqlReader["Код"]);
+                    }
+                }
+
+                Response.Redirect("~/Default_page_past.aspx?userID=" + for_id, false);
                 return;
             }
-        }
-
-        protected void Names_TextChanged(object sender, EventArgs e)
-        {
-            for_name.Visible = false;
-        }
-
-        protected void Email_TextChanged(object sender, EventArgs e)
-        {
-            for_email.Visible = false;
-        }
-
-        protected void Password_TextChanged(object sender, EventArgs e)
-        {
-            for_pass.Visible = false;
-        }
-
-        protected void ConfirmPassword_TextChanged(object sender, EventArgs e)
-        {
-            for_confirm_pass.Visible = false;
-        }
-
-        protected void Login_TextChanged(object sender, EventArgs e)
-        {
-            for_login.Visible = false;
         }
     }
 }

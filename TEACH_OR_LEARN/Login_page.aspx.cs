@@ -16,7 +16,7 @@ namespace TEACH_OR_LEARN
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
         }
 
         protected async void Unnamed4_Click(object sender, EventArgs e)
@@ -35,23 +35,20 @@ namespace TEACH_OR_LEARN
                 {
                     if (Password.Text == Convert.ToString(sqlReader["Пароль"]))
                     {
-                        Response.Redirect("~/Default_page_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
-                        return;
+                        if (Convert.ToString(sqlReader["Статус"]) == "Ученик")
+                        {
+                            Response.Redirect("~/Default_page_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
+                            return;
+                        }else
+                        {
+                            Response.Redirect("~/Teacher_kurse_past.aspx?userID=" + Convert.ToString(sqlReader["Код"]), false);
+                            return;
+                        }
                     }
                 }
             }
 
             for_pass.Visible = true;
-        }
-
-        protected void Login_TextChanged(object sender, EventArgs e)
-        {
-            for_pass.Visible = false;
-        }
-
-        protected void Password_TextChanged(object sender, EventArgs e)
-        {
-            for_pass.Visible = false;
         }
     }
 }

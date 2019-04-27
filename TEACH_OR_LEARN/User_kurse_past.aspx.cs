@@ -22,8 +22,17 @@ namespace TEACH_OR_LEARN
             return;
         }
 
+        public void remove_click(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            Response.Redirect("~/Remove_user_kurse_page.aspx?userID=" + Request.QueryString["userID"] + "&kurseID=" + button.SkinID + "&pageID=1", false);
+            return;
+        }
+
         protected async void Page_Load(object sender, EventArgs e)
         {
+            connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
+
             SqlConnection = new OleDbConnection(connectString);
             await SqlConnection.OpenAsync();
             OleDbDataReader sqlReader = null;
@@ -78,6 +87,7 @@ namespace TEACH_OR_LEARN
                             btn.Text = "Отписатся";
                             btn.SkinID = Convert.ToString(sqlReader1["Код"]);
                             btn.CssClass = "btn btn-default";
+                            btn.Click += remove_click;
                             Panel4.Controls.Add(btn);
 
                             for_buff++;

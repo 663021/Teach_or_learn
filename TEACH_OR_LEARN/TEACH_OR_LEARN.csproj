@@ -111,6 +111,7 @@
     <Content Include="User_kurse_past.aspx" />
     <Content Include="Kurse_work_page.aspx" />
     <Content Include="Que_user_page.aspx" />
+    <Content Include="Teacher_page.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,6 +223,13 @@
     </Compile>
     <Compile Include="Teacher_kurse_past.aspx.designer.cs">
       <DependentUpon>Teacher_kurse_past.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_page.Master.cs">
+      <DependentUpon>Teacher_page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher_page.Master.designer.cs">
+      <DependentUpon>Teacher_page.Master</DependentUpon>
     </Compile>
     <Compile Include="User_kurse_past.aspx.cs">
       <DependentUpon>User_kurse_past.aspx</DependentUpon>

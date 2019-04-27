@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teacher_page.master.cs" Inherits="TEACH_OR_LEARN.Teacher_page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="~/CSS/main_style.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="for_linc5" class="navbar-brand" runat="server" href="~/Default_page_past.aspx">TEACH OR LEARN</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a id="for_linc" runat="server" href="~/Default_page_past.aspx">Главная</a></li>
+                        <li><a id="for_linc1" runat="server" href="~/Information_page_past.aspx">Информация</a></li>
+                        <li><a id="for_linc2" runat="server" href="~/Other_page_past.aspx">Другое</a></li>
+                        <li><a id="for_linc3" runat="server" href="~/Kurses_page_past.aspx">Курсы</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                       <li>
+                           <a id="for_linc4" runat="server" href="~/User_kurse_past.aspx">Мои курсы</a></li>
+                       <li><a runat="server" href="~/Default_page.aspx">Выход</a></li>
+                    </ul>         
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="Main_container" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <div class="col-md-offset-5">
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - TEACH OR LEARN</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

@@ -10,9 +10,26 @@
 namespace TEACH_OR_LEARN {
     
     
-    public partial class Teacher_kurse_past {
+    public partial class WebForm13 {
         
-<<<<<<< HEAD
+        /// <summary>
+        /// H1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl H1;
+        
+        /// <summary>
+        /// H2 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl H2;
+        
         /// <summary>
         /// for_h2 элемент управления.
         /// </summary>
@@ -23,52 +40,21 @@ namespace TEACH_OR_LEARN {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl for_h2;
         
         /// <summary>
-        /// for_h3_1 элемент управления.
+        /// Unnamed4 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl for_h3_1;
+        protected global::System.Web.UI.WebControls.Button Unnamed4;
         
         /// <summary>
-        /// for_h3_2 элемент управления.
+        /// Button1 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl for_h3_2;
-        
-        /// <summary>
-        /// Panel2 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
-        
-        /// <summary>
-        /// Panel3 элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
-        
-        /// <summary>
-        /// Panel4 элемент управления.
-=======
-        /// <summary>
-        /// form1 элемент управления.
->>>>>>> b59632acd6cb2485e831fede6a0ef1324ef41202
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel4;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

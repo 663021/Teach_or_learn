@@ -64,6 +64,7 @@ C:\1All\Work\Дипломы\TEACH_OR_LEARN\TEACH_OR_LEARN\bin\Microsoft.CodeDom.
 C:\1All\Work\Дипломы\TEACH_OR_LEARN\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.csprojResolveAssemblyReference.cache
 C:\1All\Work\Дипломы\TEACH_OR_LEARN\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.dll
 C:\1All\Work\Дипломы\TEACH_OR_LEARN\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.pdb
+<<<<<<< HEAD
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\bin\ApplicationInsights.config
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\bin\roslyn\csc.exe
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -99,3 +100,38 @@ C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\obj\Debug\TEACH_OR
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.csproj.CopyComplete
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.dll
 C:\Users\Sm0ke\Documents\GitHub\Teach_or_learn\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.pdb
+=======
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\ApplicationInsights.config
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\csc.exe
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\System.Collections.Immutable.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\System.Reflection.Metadata.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\vbc.exe
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\VBCSCompiler.exe
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\roslyn\VBCSCompiler.exe.config
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\TEACH_OR_LEARN.dll.config
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\TEACH_OR_LEARN.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\TEACH_OR_LEARN.pdb
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.DependencyCollector.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.Web.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.WindowsServer.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.ApplicationInsights.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.DependencyCollector.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.Web.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.AI.WindowsServer.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.ApplicationInsights.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\1All\Work\йй\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.csprojResolveAssemblyReference.cache
+C:\1All\Work\йй\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.dll
+C:\1All\Work\йй\TEACH_OR_LEARN\obj\Debug\TEACH_OR_LEARN.pdb
+>>>>>>> b59632acd6cb2485e831fede6a0ef1324ef41202

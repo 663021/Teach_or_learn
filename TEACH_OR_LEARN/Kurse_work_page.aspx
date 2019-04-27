@@ -7,7 +7,7 @@
             <div class="jumbotron">
                 <div style="padding-top: 10px" class="form-group">
                     <asp:Button style="margin-right: 20px" runat="server" Text="Назад" ID="Unnamed4" CssClass="btn btn-default" OnClick="Unnamed4_Click" />
-                    <asp:Button runat="server" Text="Отписатся от курса" ID="Button1" CssClass="btn btn-default" />
+                    <asp:Button runat="server" Text="Отписатся от курса" ID="Button1" CssClass="btn btn-default" OnClick="Button1_Click" />
                 </div>       
             </div>    
             <div class="jumbotron">

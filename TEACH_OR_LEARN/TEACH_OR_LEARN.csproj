@@ -111,7 +111,11 @@
     <Content Include="User_kurse_past.aspx" />
     <Content Include="Kurse_work_page.aspx" />
     <Content Include="Que_user_page.aspx" />
+<<<<<<< HEAD
     <Content Include="Teacher_page.Master" />
+=======
+    <Content Include="Remove_user_kurse_page.aspx" />
+>>>>>>> b59632acd6cb2485e831fede6a0ef1324ef41202
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -251,6 +255,13 @@
     </Compile>
     <Compile Include="Que_user_page.aspx.designer.cs">
       <DependentUpon>Que_user_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Remove_user_kurse_page.aspx.cs">
+      <DependentUpon>Remove_user_kurse_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Remove_user_kurse_page.aspx.designer.cs">
+      <DependentUpon>Remove_user_kurse_page.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

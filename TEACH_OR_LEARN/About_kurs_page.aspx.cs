@@ -17,6 +17,8 @@ namespace TEACH_OR_LEARN
 
         protected async void Page_Load(object sender, EventArgs e)
         {
+            connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
+
             string kurseID = Request.QueryString["kurseID"];
 
             SqlConnection = new OleDbConnection(connectString);

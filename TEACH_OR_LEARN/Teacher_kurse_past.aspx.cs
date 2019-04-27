@@ -10,9 +10,11 @@ namespace TEACH_OR_LEARN
 {
     public partial class Teacher_kurse_past : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
-            SqlConnection = new OleDbConnection(connectString);
+            string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
+
+            OleDbConnection SqlConnection = new OleDbConnection(connectString);
             await SqlConnection.OpenAsync();
             OleDbDataReader sqlReader = null;
 

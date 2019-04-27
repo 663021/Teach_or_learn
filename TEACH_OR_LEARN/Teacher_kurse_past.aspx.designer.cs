@@ -12,7 +12,6 @@ namespace TEACH_OR_LEARN {
     
     public partial class Teacher_kurse_past {
         
-<<<<<<< HEAD
         /// <summary>
         /// for_h2 элемент управления.
         /// </summary>
@@ -60,10 +59,6 @@ namespace TEACH_OR_LEARN {
         
         /// <summary>
         /// Panel4 элемент управления.
-=======
-        /// <summary>
-        /// form1 элемент управления.
->>>>>>> b59632acd6cb2485e831fede6a0ef1324ef41202
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.

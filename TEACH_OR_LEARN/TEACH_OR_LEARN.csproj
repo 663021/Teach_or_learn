@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,6 +107,7 @@
     <Content Include="About_kurs_page.aspx" />
     <Content Include="Information_page_past.aspx" />
     <Content Include="Other_page_past.aspx" />
+    <Content Include="Teacher_kurse_past.aspx" />
     <Content Include="User_kurse_past.aspx" />
     <Content Include="Kurse_work_page.aspx" />
     <Content Include="Que_user_page.aspx" />
@@ -213,6 +215,13 @@
     </Compile>
     <Compile Include="Other_page_past.aspx.designer.cs">
       <DependentUpon>Other_page_past.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher_kurse_past.aspx.cs">
+      <DependentUpon>Teacher_kurse_past.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teacher_kurse_past.aspx.designer.cs">
+      <DependentUpon>Teacher_kurse_past.aspx</DependentUpon>
     </Compile>
     <Compile Include="User_kurse_past.aspx.cs">
       <DependentUpon>User_kurse_past.aspx</DependentUpon>

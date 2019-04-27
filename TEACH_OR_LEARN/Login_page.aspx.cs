@@ -25,7 +25,7 @@ namespace TEACH_OR_LEARN
             await SqlConnection.OpenAsync();
             OleDbDataReader sqlReader = null;
 
-            OleDbCommand command = new OleDbCommand("SELECT * FROM [Ученики]", SqlConnection);
+            OleDbCommand command = new OleDbCommand("SELECT * FROM [Пользователи]", SqlConnection);
 
             sqlReader = command.ExecuteReader();
 

@@ -3,22 +3,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main_container" runat="server">
     <div class="jumbotron">
-        <h2 id="for_h2" runat="server">МОИ КУРСЫ</h2>
+        <h2>МОИ КУРСЫ</h2>
         <div class="row">
-            <div class="col-md-4">
-                <h3 id="for_h3_1" runat="server">Наименование</h3>
+            <div class="col-md-3" id="cancel1" runat="server">
+                <h3>Наименование</h3>
             </div>
-            <div class="col-md-4">
-                <h3 id="for_h3_2" runat="server">Выполнено заданий</h3>
+            <div class="col-md-3" id="cancel2" runat="server">
+                <h3>Продолжительность</h3>
+            </div>
+            <div class="col-md-3" id="cancel3" runat="server">
+                <h3>Количество заданий</h3>
             </div>
         </div>
         <div class="row">
-            <asp:Panel class="col-md-4" ID="Panel2" runat="server">
+            <asp:Panel class="col-md-3" ID="Panel2" runat="server">
             </asp:Panel>
-            <asp:Panel class="col-sm-4" ID="Panel3" runat="server">
+            <asp:Panel class="col-sm-3" ID="Panel3" runat="server">
             </asp:Panel>
-            <asp:Panel class="col-md-4" ID="Panel4" runat="server">
+            <asp:Panel class="col-sm-3" ID="Panel1" runat="server">
+            </asp:Panel>
+            <asp:Panel class="col-md-3" ID="Panel4" runat="server">
             </asp:Panel>   
-        </div> 
-    </div>
+        </div>
+        <div class="row">
+            <asp:Panel class="col-md-3" ID="Panel5" runat="server">
+    </asp:Panel>
+        </div>  
+    </div> 
 </asp:Content>

@@ -41,7 +41,6 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="Main_container" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
             <div class="col-md-offset-5">
                 <footer>
                     <p>&copy; <%: DateTime.Now.Year %> - TEACH OR LEARN</p>

@@ -38,7 +38,6 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
             <asp:ContentPlaceHolder ID="Main_container" runat="server">
             </asp:ContentPlaceHolder>
             <div class="col-md-offset-5">

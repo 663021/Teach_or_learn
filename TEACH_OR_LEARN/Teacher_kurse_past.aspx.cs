@@ -85,9 +85,17 @@ namespace TEACH_OR_LEARN
                     btn.Text = "Редактировать курс";
                     btn.ID = Convert.ToString(sqlReader["Код"]);
                     btn.CssClass = "btn btn-default";
-                    btn.Attributes.CssStyle.Add("margin-right", "20px");
+                    btn.Attributes.CssStyle.Add("margin-top", "10px");
                     btn.Click += EditCourse;
                     Panel4.Controls.Add(btn);
+
+                    btn = new Button();
+                    btn.Text = "Проверить домашнию работу";
+                    btn.ID = Convert.ToString(sqlReader["Код"]);
+                    btn.CssClass = "btn btn-default";
+                    btn.Attributes.CssStyle.Add("margin-top", "10px");
+                    btn.Click += EditCourse;
+                    Panel6.Controls.Add(btn);
 
                     buff++;
                 }
@@ -100,20 +108,19 @@ namespace TEACH_OR_LEARN
             btn1.Click += NewCourse;
             Panel5.Controls.Add(btn1);
             
+            
             if (buff == 0)
             {
                 cancel1.Visible = false;
+                cancel2.Visible = true;
                 cancel2.InnerText = "У вас нету своих курсов!";
                 cancel2.Attributes.CssStyle.Add("margin-left", "40%");
                 cancel2.Attributes.CssStyle.Add("color-text", "red");
-                cancel3.Visible = false;
             }
             else
             {
-                cancel2.InnerText = "Продолжительность";
-                cancel2.Attributes.CssStyle.Add("margin-right","50px");
-                cancel2.Attributes.CssStyle.Add("margin-top", "10px");
-                cancel2.Attributes.CssStyle.Add("width", "220px");
+                cancel1.Visible = true;
+                cancel2.Visible = false;
             }
         }
     }

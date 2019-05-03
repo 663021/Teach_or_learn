@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main_container" runat="server">
     <div class="form-horizontal">
-        <div class="lines">
+        <div style="padding-left: 7%" class="lines">
                 <h4>Регистрация курса</h4>                          
                 <hr />
                 <asp:ValidationSummary runat="server" CssClass="text-danger" />

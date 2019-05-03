@@ -67,13 +67,48 @@ namespace TEACH_OR_LEARN
                             lab.ReadOnly = true;
                             Panel2.Controls.Add(lab);
 
+                            int for_int = 0;
+                            int for_int_1 = 0;
+
+                            command = new OleDbCommand("SELECT * FROM [Задания курсов]", SqlConnection);
+
+                            OleDbDataReader sqlReader3 = command.ExecuteReader();
+
+                            while (sqlReader3.Read())
+                            {
+                                if (Convert.ToString(sqlReader1["Код"]) == Convert.ToString(sqlReader3["Код курса"]))
+                                {
+                                    for_int_1++;
+                                }
+                            }
+
+                            sqlReader3.Close();
+
+                            command = new OleDbCommand("SELECT * FROM [Задания учеников]", SqlConnection);
+
+                            OleDbDataReader sqlReader2 = command.ExecuteReader();
+
+                            while (sqlReader2.Read())
+                            {
+                                if (Convert.ToString(sqlReader2["Код курса"]) == Convert.ToString(sqlReader1["Код"]))
+                                {
+                                    if (Request.QueryString["userID"] == Convert.ToString(sqlReader2["Код ученика"]))
+                                    {
+                                        for_int++;
+                                    }
+                                } 
+                            }
+
                             lab = new TextBox();
-                            lab.Text = Convert.ToString(sqlReader1["Продолжительность"]);
+                            lab.Text = Convert.ToString(for_int) + " из " + Convert.ToString(for_int_1);
                             lab.CssClass = "form-control";
                             lab.Attributes.CssStyle.Add("margin-top", "10px");
                             lab.Attributes.CssStyle.Add("width", "220px");
                             lab.ReadOnly = true;
                             Panel3.Controls.Add(lab);
+
+                            for_int = 0;
+                            for_int_1 = 0;
 
                             Button btn = new Button();
                             btn.Text = "Приступить к выполнению";
@@ -95,22 +130,25 @@ namespace TEACH_OR_LEARN
                     }
 
                     sqlReader1.Close();
-                }
-
-
-
-                if (for_buff == 0)
-                {
-                    for_h3_1.Visible = false;
-                    for_h3_2.InnerText = "Вы не записаны на курсы";
-                }else
-                {
-                    for_h3_1.Visible = true;
-                    for_h3_2.InnerText = "Выполнено заданий";
-                }
+                }                
             }
 
             sqlReader.Close();
+
+            if (for_buff == 0)
+            {
+                for_h3_1.Visible = false;
+                for_h3_2.InnerText = "Вы не записаны на курсы";
+                for_id.Visible = true;
+                for_id.HRef = @"Kurses_page_past.aspx?userID=" + Request.QueryString["userID"];
+            }
+            else
+            {
+                for_h3_1.Visible = true;
+                for_h3_2.InnerText = "Выполнено заданий";
+                for_id.Visible = false;
+                for_id.HRef = @"Kurses_page_past.aspx?userID=" + Request.QueryString["userID"];
+            }
         }
     }
     }

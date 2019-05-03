@@ -40,6 +40,14 @@ namespace TEACH_OR_LEARN
                 if (Request.QueryString["kurseID"] == Convert.ToString(sqlReader["Код курса"]))
                 {
                     for_buff++;
+
+                    /*CheckBox check = new CheckBox();
+                    check.Attributes.CssStyle.Add("margin-top", "18px");
+                    check.Attributes.CssStyle.Add("position", "absolute");
+                    check.Attributes.CssStyle.Add("left", "110px");
+
+                    Panel2.Controls.Add(check);*/
+
                     Button btn = new Button();
                     btn.Text = "Задание №" + Convert.ToString(for_buff) + ": " + Convert.ToString(sqlReader["Тема"]);
                     btn.ID = Convert.ToString(sqlReader["Код"]);
@@ -49,6 +57,22 @@ namespace TEACH_OR_LEARN
                     btn.Attributes.CssStyle.Add("max-width", "470px");
                     btn.Attributes.CssStyle.Add("min-width", "470px");
                     btn.Click += start_click;
+
+                    command = new OleDbCommand("SELECT * FROM [Задания учеников]", SqlConnection);
+
+                    OleDbDataReader sqlReader1 = command.ExecuteReader();
+
+                    while (sqlReader1.Read())
+                    {
+                        if (Convert.ToString(sqlReader["Код"]) == Convert.ToString(sqlReader1["Код задания"]))
+                        {
+                            if (Request.QueryString["userID"] == Convert.ToString(sqlReader1["Код ученика"]))
+                            {
+                                btn.Attributes.CssStyle.Add("background-color", "#cef3c0");
+                                btn.Text = "☑ Задание №" + Convert.ToString(for_buff) + ": " + Convert.ToString(sqlReader["Тема"]);
+                            }
+                        }
+                    }
                     Panel2.Controls.Add(btn);
                 }
             }

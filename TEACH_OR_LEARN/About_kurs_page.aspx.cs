@@ -83,7 +83,8 @@ namespace TEACH_OR_LEARN
             await command.ExecuteNonQueryAsync();
 
 
-            Response.Redirect("/Kurses_page_past.aspx?userID=" + Request.QueryString["userID"], false);
+            Response.Redirect("/User_kurse_past.aspx?userID=" + Request.QueryString["userID"], false);
+            Response.Redirect("/User_kurse_past.aspx?userID=" + Request.QueryString["userID"], false);
             return;
         }
     }

@@ -40,6 +40,15 @@ namespace TEACH_OR_LEARN {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl for_h3_2;
         
         /// <summary>
+        /// for_id элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor for_id;
+        
+        /// <summary>
         /// Panel2 элемент управления.
         /// </summary>
         /// <remarks>

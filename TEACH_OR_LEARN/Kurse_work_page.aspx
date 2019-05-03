@@ -11,9 +11,10 @@
                 </div>       
             </div>    
             <div class="jumbotron">
-                    <h3 style="padding-left: 170px" id="for_h3_1" runat="server">О КУРСЕ</h3>
+                    <h3 style="padding-left: 170px" id="for_h3_1" runat="server">О КУРСЕ
+                    </h3>
                     <div class="form-group">
-                        <asp:Label runat="server" ID="Label1" CssClass="control-label">Наименование: Программирование</asp:Label>     
+                        <asp:Label runat="server" ID="Label1" CssClass="control-label">Наименование: Программирование</asp:Label>   
                     </div>               
                 <div class="form-group">
                         <asp:Label runat="server" ID="Label2" CssClass="control-label">Направление: ИТ</asp:Label>                  

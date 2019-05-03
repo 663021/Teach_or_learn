@@ -10,6 +10,7 @@
             </div>
             <div class="col-md-4">
                 <h3 id="for_h3_2" runat="server">Выполнено заданий</h3>
+                <a id="for_id" style="padding-left: 3vw;" href="#" runat="server">Записатся на курсы</a>
             </div>
         </div>
         <div class="row">

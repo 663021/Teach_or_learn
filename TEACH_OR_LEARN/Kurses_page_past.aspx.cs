@@ -37,7 +37,7 @@ namespace TEACH_OR_LEARN
             await command.ExecuteNonQueryAsync();
 
 
-            Response.Redirect("/Kurses_page_past.aspx?userID=" + Request.QueryString["userID"], false);
+            Response.Redirect("/User_kurse_past.aspx?userID=" + Request.QueryString["userID"], false);
             return;
         }
 
@@ -47,73 +47,97 @@ namespace TEACH_OR_LEARN
 
             SqlConnection = new OleDbConnection(connectString);
             await SqlConnection.OpenAsync();
-            OleDbDataReader sqlReader = null;
+            OleDbDataReader sqlReader2 = null;
 
             OleDbCommand command = new OleDbCommand("SELECT * FROM [Курсы]", SqlConnection);
 
-            sqlReader = command.ExecuteReader();
+            OleDbDataReader sqlReader = command.ExecuteReader();
 
             while (sqlReader.Read())
             {
-                TextBox lab = new TextBox();
-                lab.Text = Convert.ToString(sqlReader["Наименование"]);
-                lab.CssClass = "form-control";
-                lab.Attributes.CssStyle.Add("margin-top", "10px");
-                lab.Attributes.CssStyle.Add("width", "220px");
-                lab.ReadOnly = true;
-                Panel2.Controls.Add(lab);
-
-                lab = new TextBox();
-                lab.Text = Convert.ToString(sqlReader["Продолжительность"]);
-                lab.CssClass = "form-control";
-                lab.Attributes.CssStyle.Add("margin-top", "10px");
-                lab.Attributes.CssStyle.Add("width", "220px");
-                lab.ReadOnly = true;
-                Panel3.Controls.Add(lab);
+                int for_b = 0;
 
                 string for_buff = Convert.ToString(sqlReader["Код"]);
 
-                OleDbDataReader sqlReader1 = null;
+                OleDbCommand command2 = new OleDbCommand("SELECT * FROM [Курсы учеников]", SqlConnection);
 
-                OleDbCommand command1 = new OleDbCommand("SELECT * FROM [Задания курсов]", SqlConnection);
+                sqlReader2 = command2.ExecuteReader();
 
-                sqlReader1 = command1.ExecuteReader();
-
-                int for_kol = 0;
-
-                while (sqlReader1.Read())
+                while (sqlReader2.Read())
                 {
-                    if (for_buff == Convert.ToString(sqlReader1["Код курса"]))
-                        for_kol++;
+                    if (Convert.ToString(sqlReader2["Код ученика"]) == Request.QueryString["userID"])
+                    {
+                        if (Convert.ToString(sqlReader2["Код курса"]) == for_buff)
+                        {
+                            for_b++;
+                        }
+                    }
                 }
 
-                sqlReader1.Close();
+                sqlReader2.Close();
 
-                lab = new TextBox();
-                lab.Text = Convert.ToString(for_kol);
-                lab.CssClass = "form-control";
-                lab.Attributes.CssStyle.Add("margin-top", "10px");
-                lab.Attributes.CssStyle.Add("width", "220px");
-                lab.ReadOnly = true;
-                Panel1.Controls.Add(lab);
+                if (for_b == 0)
+                {
 
-                Button btn = new Button();
-                btn.Text = "Подробнее";
-                btn.ID = Convert.ToString(sqlReader["Код"]);
-                btn.CssClass = "btn btn-default";
-                btn.Attributes.CssStyle.Add("margin-right", "20px");
-                btn.Click += about_click;
-                Panel4.Controls.Add(btn);
+                    TextBox lab = new TextBox();
+                    lab.Text = Convert.ToString(sqlReader["Наименование"]);
+                    lab.CssClass = "form-control";
+                    lab.Attributes.CssStyle.Add("margin-top", "10px");
+                    lab.Attributes.CssStyle.Add("width", "220px");
+                    lab.ReadOnly = true;
+                    Panel2.Controls.Add(lab);
 
-                btn = new Button();
-                btn.Text = "Записатся";
-                btn.SkinID = Convert.ToString(sqlReader["Код"]);
-                btn.CssClass = "btn btn-default";
-                btn.Click += about_click_1;
-                Panel4.Controls.Add(btn);
+                    lab = new TextBox();
+                    lab.Text = Convert.ToString(sqlReader["Продолжительность"]);
+                    lab.CssClass = "form-control";
+                    lab.Attributes.CssStyle.Add("margin-top", "10px");
+                    lab.Attributes.CssStyle.Add("width", "220px");
+                    lab.ReadOnly = true;
+                    Panel3.Controls.Add(lab);
+
+                    OleDbDataReader sqlReader1 = null;
+
+                    OleDbCommand command1 = new OleDbCommand("SELECT * FROM [Задания курсов]", SqlConnection);
+
+                    sqlReader1 = command1.ExecuteReader();
+
+                    int for_kol = 0;
+
+                    while (sqlReader1.Read())
+                    {
+                        if (for_buff == Convert.ToString(sqlReader1["Код курса"]))
+                            for_kol++;
+                    }
+
+                    sqlReader1.Close();
+
+                    lab = new TextBox();
+                    lab.Text = Convert.ToString(for_kol);
+                    lab.CssClass = "form-control";
+                    lab.Attributes.CssStyle.Add("margin-top", "10px");
+                    lab.Attributes.CssStyle.Add("width", "220px");
+                    lab.ReadOnly = true;
+                    Panel1.Controls.Add(lab);
+
+                    Button btn = new Button();
+                    btn.Text = "Подробнее";
+                    btn.ID = Convert.ToString(sqlReader["Код"]);
+                    btn.CssClass = "btn btn-default";
+                    btn.Attributes.CssStyle.Add("margin-right", "20px");
+                    btn.Click += about_click;
+                    Panel4.Controls.Add(btn);
+
+                    btn = new Button();
+                    btn.Text = "Записатся";
+                    btn.SkinID = Convert.ToString(sqlReader["Код"]);
+                    btn.CssClass = "btn btn-default";
+                    btn.Click += about_click_1;
+                    Panel4.Controls.Add(btn);
+                }
             }
 
             sqlReader.Close();
+
         }
     }
 }

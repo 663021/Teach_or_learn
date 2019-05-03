@@ -56,13 +56,12 @@ namespace TEACH_OR_LEARN
                 await SqlConnection.OpenAsync();
                 OleDbDataReader sqlReader = null;
 
-                OleDbCommand command = new OleDbCommand("INSERT INTO [Пользователи] ([ФИО],[Адрес электронной почты],[Пароль],Логин)VALUES(@1,@2,@3,@4)", SqlConnection);
+                OleDbCommand command = new OleDbCommand("INSERT INTO [Пользователи] ([ФИО],[Адрес электронной почты],[Пароль],Логин,Статус)VALUES(@1,@2,@3,@4,@5)", SqlConnection);
                 command.Parameters.AddWithValue("@1", Names.Text);
                 command.Parameters.AddWithValue("@2", Email.Text);
                 command.Parameters.AddWithValue("@3", Password.Text);
                 command.Parameters.AddWithValue("@4", Login.Text);
                 command.Parameters.AddWithValue("@5", "Ученик");
-                await command.ExecuteNonQueryAsync();
 
                 OleDbCommand command1 = new OleDbCommand("SELECT * FROM [Пользователи]", SqlConnection);
 

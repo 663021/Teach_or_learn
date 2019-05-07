@@ -27,11 +27,11 @@
             </asp:Panel>
                     </td>
                     <td>
-                    <asp:Panel class="col-md-3" ID="Panel4" runat="server">
+                    <asp:Panel class="col-md-1" ID="Panel4" runat="server">
             </asp:Panel>
                     </td>
                     <td>
-                    <asp:Panel class="col-md-3" ID="Panel6" runat="server">
+                    <asp:Panel class="col-md-1" ID="Panel6" runat="server">
             </asp:Panel>
                     </td>
                 </tr>
@@ -39,8 +39,9 @@
             <h3 id="cancel2" runat="server"> Кек </h3>
             </div>
         <div class="row">
-            <asp:Panel class="col-md-3" ID="Panel5" runat="server">
+            <asp:Panel class="col-md-1" ID="Panel5" runat="server">
     </asp:Panel>
-        </div>  
-        </div>    
+        </div> 
+        </div> 
+    <hr />
 </asp:Content>

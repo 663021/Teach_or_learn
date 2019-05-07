@@ -13,93 +13,102 @@ namespace TEACH_OR_LEARN {
     public partial class Teacher_kurse_creat {
         
         /// <summary>
-        /// Names элемент управления.
+        /// Name элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Names;
+        protected global::System.Web.UI.WebControls.TextBox Name;
         
         /// <summary>
-        /// for_name элемент управления.
+        /// NameDanger элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label for_name;
+        protected global::System.Web.UI.WebControls.Label NameDanger;
         
         /// <summary>
-        /// Email элемент управления.
+        /// Naprav элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Email;
+        protected global::System.Web.UI.WebControls.TextBox Naprav;
         
         /// <summary>
-        /// for_email элемент управления.
+        /// NapravDenger элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label for_email;
+        protected global::System.Web.UI.WebControls.Label NapravDenger;
         
         /// <summary>
-        /// Login элемент управления.
+        /// Info элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Login;
+        protected global::System.Web.UI.WebControls.TextBox Info;
         
         /// <summary>
-        /// for_login элемент управления.
+        /// InfoDanger элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label for_login;
+        protected global::System.Web.UI.WebControls.Label InfoDanger;
         
         /// <summary>
-        /// Password элемент управления.
+        /// Sloj элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Password;
+        protected global::System.Web.UI.WebControls.TextBox Sloj;
         
         /// <summary>
-        /// for_pass элемент управления.
+        /// SlojDanger элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label for_pass;
+        protected global::System.Web.UI.WebControls.Label SlojDanger;
         
         /// <summary>
-        /// ConfirmPassword элемент управления.
+        /// Count элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ConfirmPassword;
+        protected global::System.Web.UI.WebControls.TextBox Count;
         
         /// <summary>
-        /// for_confirm_pass элемент управления.
+        /// CountDanger элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label for_confirm_pass;
+        protected global::System.Web.UI.WebControls.Label CountDanger;
+        
+        /// <summary>
+        /// Teacher элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Teacher;
     }
 }

@@ -91,7 +91,7 @@ namespace TEACH_OR_LEARN
 
                     btn = new Button();
                     btn.Text = "Проверить домашнию работу";
-                    btn.ID = Convert.ToString(sqlReader["Код"]);
+                    btn.SkinID = Convert.ToString(sqlReader["Код"]);
                     btn.CssClass = "btn btn-default";
                     btn.Attributes.CssStyle.Add("margin-top", "10px");
                     btn.Click += EditCourse;

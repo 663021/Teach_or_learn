@@ -36,7 +36,7 @@
                         <asp:Label runat="server" ID="Label4" style="padding-left: 20%" CssClass="control-label">Сложность: <asp:TextBox runat="server" ID="TextBox5" Width="220"></asp:TextBox></asp:Label>                   
                  </div>
                  <div style="padding-top: 10px" class="form-group">
-                    <asp:Button style="margin: 0px 20px 0px 200px" runat="server" Text="Обновить" ID="Unnamed4" CssClass="btn btn-default"/>
+                    <asp:Button style="margin: 0px 20px 0px 200px" runat="server" Text="Обновить" ID="Unname4" CssClass="btn btn-default" />
                     <asp:Button runat="server" Text="Удалить" ID="Button1" CssClass="btn btn-default" OnClick="DelClick" />
                 </div>    
             </div>  

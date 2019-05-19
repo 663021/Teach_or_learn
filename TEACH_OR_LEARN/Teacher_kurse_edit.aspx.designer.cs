@@ -112,13 +112,13 @@ namespace TEACH_OR_LEARN {
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
         
         /// <summary>
-        /// Unnamed4 элемент управления.
+        /// Unname4 элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Unnamed4;
+        protected global::System.Web.UI.WebControls.Button Unname4;
         
         /// <summary>
         /// Button1 элемент управления.

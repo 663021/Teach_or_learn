@@ -71,7 +71,7 @@ namespace TEACH_OR_LEARN
 
             await SqlConnection.OpenAsync();
 
-            OleDbCommand command = new OleDbCommand("UPDATE [Задания учеников] SET Файл = @ratings WHERE Код = @id", SqlConnection);
+            OleDbCommand command = new OleDbCommand("UPDATE [Задания учеников] SET Оценка = @ratings WHERE Код = @id", SqlConnection);
 
             command.Parameters.AddWithValue("@ratings", TextBox.Text);
             command.Parameters.AddWithValue("@id", id.Text);

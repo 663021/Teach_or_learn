@@ -96,7 +96,7 @@ namespace TEACH_OR_LEARN
                     Panel4.Controls.Add(btn);
 
                     btn = new Button();
-                    btn.Text = "Проверить домашнию работу";
+                    btn.Text = "Проверить домашнюю работу";
                     btn.SkinID = Convert.ToString(sqlReader["Код"]);
                     btn.CssClass = "btn btn-default";
                     btn.Attributes.CssStyle.Add("margin-top", "10px");

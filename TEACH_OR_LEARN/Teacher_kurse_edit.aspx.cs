@@ -186,6 +186,7 @@ namespace TEACH_OR_LEARN
         protected async void Page_Load(object sender, EventArgs e)
         {
             Button4.Click += DelClick_1;
+            Unname4.Click += NewClick;
 
             if (Request.QueryString["questID"] != null)
             {

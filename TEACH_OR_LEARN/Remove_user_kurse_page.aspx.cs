@@ -39,7 +39,6 @@ namespace TEACH_OR_LEARN
         {
             SqlConnection = new OleDbConnection(connectString);
             await SqlConnection.OpenAsync();
-            OleDbDataReader sqlReader = null;
 
             OleDbCommand command = new OleDbCommand("DELETE * FROM [Курсы учеников] WHERE [Код ученика]=@1 AND [Код курса]=@2", SqlConnection);
             command.Parameters.AddWithValue("@1", Request.QueryString["userID"]);

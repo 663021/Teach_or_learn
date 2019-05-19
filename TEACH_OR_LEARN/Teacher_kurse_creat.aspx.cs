@@ -32,27 +32,34 @@ namespace TEACH_OR_LEARN
 
             i = await command.ExecuteNonQueryAsync();
 
-            Response.Write("<script>alert('" + i + Name.Text + "');</script>");
+            Response.Redirect("~/Teacher_kurse_past.aspx?userID=" + Request.QueryString["userID"], false);
         }
 
         protected async void Page_Load(object sender, EventArgs e)
         {
-            string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
-
-            OleDbConnection SqlConnection = new OleDbConnection(connectString);
-            await SqlConnection.OpenAsync();
-
-            OleDbDataReader reader = null;
-
-            OleDbCommand command = new OleDbCommand("SELECT ФИО FROM Пользователи WHERE Код = @id",SqlConnection);
-
-            command.Parameters.AddWithValue("@id",Request.QueryString["userID"]);
-
-            reader = command.ExecuteReader();
-
-            while (reader.Read())
+            if (Request.QueryString["userID"] != null)
             {
-                Teacher.Text = Convert.ToString(reader["ФИО"]);
+                string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
+
+                OleDbConnection SqlConnection = new OleDbConnection(connectString);
+                await SqlConnection.OpenAsync();
+
+                OleDbDataReader reader = null;
+
+                OleDbCommand command = new OleDbCommand("SELECT ФИО FROM Пользователи WHERE Код = @id", SqlConnection);
+
+                command.Parameters.AddWithValue("@id", Request.QueryString["userID"]);
+
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Teacher.Text = Convert.ToString(reader["ФИО"]);
+                }
+            }
+            else
+            {
+                Response.Redirect("~/Teacher_kurse_past.aspx?", false);
             }
         }
     }

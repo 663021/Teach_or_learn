@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Teacher_page.Master" Async="true" CodeBehind="Teacher_kurse_past.aspx.cs" Inherits="TEACH_OR_LEARN.Teacher_kurse_past" %>
+﻿    <%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Teacher_page.Master" Async="true" CodeBehind="Teacher_kurse_past.aspx.cs" Inherits="TEACH_OR_LEARN.Teacher_kurse_past" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Main_container" runat="server">    

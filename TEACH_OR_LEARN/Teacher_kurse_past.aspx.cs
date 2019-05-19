@@ -21,6 +21,12 @@ namespace TEACH_OR_LEARN
             Response.Redirect("~/Teacher_kurse_creat.aspx?userID=" + Request.QueryString["userID"], false);
         }
 
+        protected void HomeWork(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            Response.Redirect("~/Home_work.aspx?userID=" + Request.QueryString["userID"] + "&kurseID=" + button.SkinID, false);
+        }
+
         protected async void Page_Load(object sender, EventArgs e)
         {
             string connectString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Request.PhysicalPath.Substring(0, Request.PhysicalPath.LastIndexOf('\\')) + @"\tol_db.mdb";
@@ -94,7 +100,7 @@ namespace TEACH_OR_LEARN
                     btn.SkinID = Convert.ToString(sqlReader["Код"]);
                     btn.CssClass = "btn btn-default";
                     btn.Attributes.CssStyle.Add("margin-top", "10px");
-                    btn.Click += EditCourse;
+                    btn.Click += HomeWork;
                     Panel6.Controls.Add(btn);
 
                     buff++;
